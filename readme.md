@@ -24,7 +24,7 @@ Key Differences
 HTML CSS
 Structure & Content Style & Presentation
 Defines webpage elements Controls appearance
-Uses tags (<h1>, <p>) Uses rules (color: blue;)
+Uses tags (<h1> <p>) Uses rules (color: blue;)
 .html file extension .css file extension
 Skeleton of a webpage Skin & Clothes of a webpage
 🚀 Getting Started
