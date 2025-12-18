@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling Form using Event Object</title>
+  </head>
+  <body>
+    <p>Your Name : <span id="result"></span></p>
+    <form>
+      <input type="text" id="tx" />
+    </form>
+
+    <script>
+      document.getElementById("tx").addEventListener("keyup", function (e) {
+        // console.log(e.target.value);
+        document.getElementById("result").innerText =
+          e.target.value.toUpperCase();
+
+        e.target.value = e.target.value.toUpperCase();
+      });
+    </script>
+  </body>
+</html>

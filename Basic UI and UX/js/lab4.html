@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light and Dark Theme</title>
+    <style>
+      .light {
+        background-color: white;
+        color: black;
+      }
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body id="main" class="light">
+    <h1>Hello, Students</h1>
+    <button type="button" id="btn">Change Theme</button>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        // logic
+        let body = document.getElementById("main");
+        console.log(body.classList[0]);
+        if (body.classList[0] === "light") {
+          body.classList.remove("light");
+          body.classList.add("dark");
+        } else {
+          body.classList.remove("dark");
+          body.classList.add("light");
+        }
+      });
+    </script>
+  </body>
+</html>

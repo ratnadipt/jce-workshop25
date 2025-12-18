@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MGrow</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      .main {
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px;
+      }
+
+      .top-header {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px auto;
+      }
+      .right {
+        display: flex;
+        width: 80%;
+        align-items: center;
+      }
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bottom-section .bottom button {
+        padding: 10px 20px;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 480px) {
+        .top-header {
+          flex-direction: column;
+          align-items: center;
+        }
+        .right h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top-header">
+        <div class="left">
+          <img
+            src="data:image/jpeg;base64,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I+GfhAaPiCtSbrCtarZapJICgV2MmST+r++B70vE6LDhLq2J+qCN3IZ6dekHZZ1HFKylndW0NZWpY7nwgwcemVB2wQ8aniu3VV6YGoFkNjbid3IgBVHr5k8/VAydPrP0bPY1KqjupZWygVWK+kWAweXP2iB60fEKbc93aj46hSCRnpkQPF/FaFfu2vrFnIbCwzk9AfVmBc4Xqu9oqtIANlKWbRzxuUNj98DKgICAgICBZuoDHJZxj7LMv3QPHmY+3b+2/wCcB5mPt2/tv+cCtelAOd1hx4F3I+RgYnG6LGWuytd70XC8V5A3DayMoJ5Z2uce0CBgcS4j3qBafPVvwQK1reobj07xrE2gA+OfnApxLS2LZp7HtvxXS1TW0olri1tnplCjcjtYZA5e4mBlcCp9O20NqWD7BvvWurcVB9IIqKR1xkjngeqBf7PVsukqVlKsKwCrAgj3gwLGsLU6k39271WUpU5rU2OjVs7K21eZB7w9M4wIGTpOJi19qVXFMEm1kepAfAemAWPuBgakaZxp6mNTstWuuuerad5Q2XbWC9WwXR8eO3lAvG0W62ixKbdqJarXtXZWPSAwvpgE9PViBaGkYcMtrFbb2F52bTvJaxyOWMnIxA2b1t56rbTt81dd2Dtz3iEDPr5H5QNTqdFYdN0tGziNtzKiqbDX31hBVXBDdVboc45eEDI4dXv1K2izWWbKmXvLq6qE9Ij0Md0jP0z6hiBb0toqpfT2ae17S1uVFbulpdmIbeBtGQRncRiBs+z9ZXR6dWUqy6apSrAhgQgBBB6c4GS+lBJO+wZOeTuB8swKeZj7dv7b/nAeZj7dv7b/AJwLlNAXoznP2mZvvgXYCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgf/9k="
+            alt="site logo"
+          />
+        </div>
+        <div class="right">
+          <h1>MGrow EdTech Company</h1>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="top">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ratione
+            nisi inventore error omnis assumenda quasi esse, tempore veritatis
+            incidunt fugiat quo sint obcaecati dolore aperiam dolorem hic
+            praesentium aspernatur ipsam accusantium natus! Nam, quis esse.
+            Odio, molestiae dolore numquam, inventore id quibusdam sit cumque
+            quia ratione facere nostrum eius sint tempore quis hic et quos nulla
+            laborum, iure placeat vitae obcaecati. Dignissimos odio quia a, illo
+            perspiciatis perferendis distinctio. Expedita doloremque dolorum
+            tenetur! Amet quisquam harum reiciendis quidem, alias debitis natus
+            impedit magnam labore facilis totam laboriosam porro odit,
+            dignissimos eos consequatur inventore voluptatibus recusandae eum
+            voluptatem non, cumque repellendus nulla. Incidunt, ab odio amet
+            officia repellendus corporis architecto commodi! Enim, recusandae
+            nihil dolorum accusantium iusto sint reiciendis corporis aliquid
+            eveniet minima deserunt optio temporibus voluptatum unde cupiditate
+            harum natus rem numquam? Architecto illum saepe similique nostrum
+            animi in incidunt provident nesciunt beatae quasi quisquam laborum
+            numquam eius optio molestiae et, dolor ullam odio! Eveniet,
+            molestiae nam voluptatibus sequi sapiente est veniam fugit dolore
+            unde amet nobis libero maiores nulla totam id nemo, ipsa minus,
+            architecto nihil officia ab numquam nostrum accusamus. Fugit
+            veritatis illo quasi corrupti quibusdam quae reiciendis ullam? Totam
+            in amet, cum culpa sapiente vero debitis.
+          </p>
+        </div>
+        <div class="bottom">
+          <button type="button">Read More...</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/* CSS variables */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lexend;
+  line-height: 1.6rem;
+  padding: 20px;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 2px 10px black;
+  margin-bottom: 20px;
+}
+.header-logo {
+  width: 40%;
+}
+.header-logo > img {
+  width: 150px;
+}
+.header-link {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  align-items: center;
+}
+#log-out {
+  padding: 10px 20px;
+  border: none;
+  display: block;
+}
+
+.header-link .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  border: 2px solid black;
+}
+
+.main .left-sidebar {
+  width: 20%;
+  padding: 20px 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.left-sidebar .dash-title {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.left-sidebar .nav-bar ul {
+  list-style-type: none;
+}
+
+.left-sidebar .nav-bar ul li {
+  margin-bottom: 10px;
+}
+
+.left-sidebar .nav-bar ul li a {
+  display: block;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Dashboard stylinng */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 30px auto;
+}
+
+.dashboard .row {
+  display: flex;
+  column-gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.row .col {
+  width: 40%;
+}
+
+.card {
+  margin: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 30px;
+}

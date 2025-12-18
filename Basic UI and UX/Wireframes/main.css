@@ -1,0 +1,18 @@
+.site-title {
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+}
+
+a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: lexend;
+}
+a:hover {
+  background-color: black;
+  color: white;
+}

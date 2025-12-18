@@ -1,0 +1,68 @@
+h1 {
+  color: blue;
+  background-color: yellow;
+  border: 2px solid red;
+}
+
+/* Before Effect */
+.solid {
+  width: 50%;
+  height: 100px;
+  background-color: blue;
+}
+/* After Effect : if something happens */
+.solid:hover {
+  background-color: red;
+}
+
+.capsule {
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  border-radius: 25px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 100px;
+}
+
+.bordered {
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+  border: 1px solid red;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px black;
+}
+
+.default {
+  background-color: black;
+}
+
+.primary {
+  background-color: rgb(3, 112, 255);
+}
+
+.secondary {
+  background-color: rgb(39, 251, 39);
+}
+
+.tertiary {
+  background-color: red;
+}

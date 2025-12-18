@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show or Hide element</title>
+    <style>
+      .box {
+        display: none;
+        border: 2px solid black;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="para" class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, doloribus
+      voluptate quod totam impedit praesentium soluta fugit earum sapiente
+      recusandae laboriosam at saepe numquam! Voluptatum reiciendis rerum
+      recusandae natus quam.
+    </p>
+    <button type="button" id="btn">Show</button>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        let p = document.getElementById("para");
+        if (p.style.display === "none") {
+          p.style.display = "block";
+          document.getElementById("btn").innerText = "Hide";
+        } else {
+          document.getElementById("btn").innerText = "SHow";
+          p.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

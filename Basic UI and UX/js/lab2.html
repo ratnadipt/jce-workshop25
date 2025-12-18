@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing the CSS styles</title>
+  </head>
+  <body>
+    <h1 id="myId">Hello, Students</h1>
+    <button type="button" onclick="change()">Change Style</button>
+
+    <script>
+      function change() {
+        // element target
+        let headElement = document.getElementById("myId");
+        // change the style
+        /*headElement.style.color = "blue";
+        headElement.style.backgroundColor = "yellow";*/
+
+        headElement.style = "color:blue; background-color:yellow;"; // css style property
+      }
+    </script>
+  </body>
+</html>
