@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create a List of Fruits</h1>
+    <form id="f">
+      <label for="userName">Enter Fruit Name :</label>
+      <input type="text" id="userName" />
+
+      <button type="submit" id="btn">Submit</button>
+    </form>
+
+    <ul id="result"></ul>
+
+    <script>
+      let fruits = []; // empty Array
+
+      document.getElementById("f").onsubmit = function (e) {
+        // prevent page reloading
+        e.preventDefault();
+
+        // read user input value
+        let inputText = document.getElementById("userName").value;
+        fruits.push(inputText);
+
+        // A new HTML Element Using JS : createElement(Element)
+        let item = document.createElement("li");
+        item.innerText = inputText;
+        // <li>Banana </li>
+
+        // to add element to parent element : appendChild(element)
+        document.getElementById("result").appendChild(item);
+
+        document.getElementById("userName").value = "";
+      };
+    </script>
+  </body>
+</html>

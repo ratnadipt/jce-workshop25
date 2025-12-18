@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let students = ["John", "Sandip", "Ram", "Govinda"]; // [0, 1, 2,...]
+
+      // students.push("XYZ");
+      // // Iteration : Accessing each element using loops
+      // console.log(students);
+
+      // students.pop();
+      // console.log(students);
+
+      // students.unshift("AAAA");
+      // console.log(students);
+
+      // students.shift();
+      // console.log(students);
+
+      // =================================
+      let nums = [10, 40, 23, 5, 50, 24, 57, 30];
+      // nums.forEach(function (num) {
+      //   console.log(num * 2);
+      // });
+
+      let newArray = nums.map(function (num) {
+        return num + 2;
+      });
+      console.log(newArray);
+
+      // filter
+      let newA = nums.filter(function (num) {
+        return num % 2 !== 0;
+      });
+      console.log(newA);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let student = {
+        name: "Ravi",
+        age: 20,
+        percentage: 67,
+        result: function () {
+          if (this.percentage >= 40) {
+            return "Pass";
+          } else {
+            return "Fail";
+          }
+        },
+      };
+
+      console.log(`Student Name : ${student.name}`);
+      console.log(`Student Result : ${student.result()}`);
+
+      let product = {
+        name: "Laptop",
+        price: 34000,
+        getDiscount: function () {
+          if (this.price > 50000) {
+            return this.price * 0.1; // 10% discount
+          } else {
+            return 0; // No discount
+          }
+        },
+      };
+    </script>
+  </body>
+</html>
