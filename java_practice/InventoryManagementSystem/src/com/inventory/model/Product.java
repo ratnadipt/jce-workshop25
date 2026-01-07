@@ -1,6 +1,6 @@
 package com.inventory.model;
 
-public class Product {
+public abstract class Product {
 	// encapsulation
 	private int productId;
 	private String productName;
@@ -31,6 +31,7 @@ public class Product {
 		return this.category;
 	}
 	
-	
+	// abstract method
+	public abstract double calculateTax();
 	
 }
