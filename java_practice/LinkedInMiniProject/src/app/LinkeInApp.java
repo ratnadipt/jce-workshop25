@@ -103,6 +103,9 @@ public class LinkeInApp {
 	public static void profileMenu(User user) {
 		System.out.println("1. Create Profile");
 		System.out.println("2. View Profile");
+		System.out.println("3. Add Skills");
+		System.out.println("4. Add Connections");
+		System.out.println("5. View Connections");
 		
 		System.out.println("Enter Your Choice : ");
 		int choice = read.nextInt();
@@ -125,6 +128,38 @@ public class LinkeInApp {
 			break;
 		case 2: // view
 			user.getProfile().displayProfile();
+			break;
+		case 3: // add skills
+			if(user.getProfile() == null) {
+				System.out.println("Create Profile First.");
+			}
+			else {
+				System.out.print("Enter Skill : ");
+				String skill = read.nextLine();
+				user.getProfile().addSkill(skill);
+			}
+			
+			break;
+		case 4: // add connections
+			System.out.print("Enter User Name to connect : ");
+			String username = read.nextLine();
+			if(user.getUserName().equals(username)) {
+				System.out.println("Same user.");
+			}
+			else {
+				// entered username has an account or not.
+				for(User u: users) {
+					if(u.getUserName().equals(username)) {
+						// user has account
+						user.addConnection(u);
+						return;
+					}
+				}
+				System.out.println("User Not Found!");
+			}
+			break;
+		case 5: // view connections
+			user.viewConnection();
 			break;
 		default:
 			System.out.println("Invalid Choice!");
