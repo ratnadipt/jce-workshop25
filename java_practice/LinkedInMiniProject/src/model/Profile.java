@@ -15,8 +15,14 @@ public class Profile {
 	
 	// method to add skills.
 	public void addSkill(String skill) {
-		skills.add(skill);
-		System.out.println(skill + " Skill is added.");
+		// validate duplicate skills
+		if(skills.contains(skill)) {
+			System.out.println(skill + " is Already Added!");
+		}
+		else {
+			skills.add(skill);
+			System.out.println(skill + " Skill is added.");
+		}
 	}
 	
 	// method to display details of user profile.

@@ -29,14 +29,15 @@ public class LinkeInApp {
 			User u = loginUser();
 			if(u != null) {
 				System.out.println("Login Successful!");
-				// profile menu
-				profileMenu(u);
+				// Dashboard
+				userDashboard(u);
 			}
 			else {
 				System.out.println("Invalid Credentials!");
 			}
 			break;
 		case 3: // exit
+			System.out.println("App Closed!");
 			System.exit(0);
 			break;
 		default:
@@ -99,13 +100,15 @@ public class LinkeInApp {
 		return null; // not found
 	}
 	
-	// method to create a profile
-	public static void profileMenu(User user) {
+	// method to create an dashboard.
+	public static void userDashboard(User user) {
+		while(true) {
 		System.out.println("1. Create Profile");
 		System.out.println("2. View Profile");
 		System.out.println("3. Add Skills");
 		System.out.println("4. Add Connections");
 		System.out.println("5. View Connections");
+		System.out.println("6. Logout");
 		
 		System.out.println("Enter Your Choice : ");
 		int choice = read.nextInt();
@@ -147,12 +150,12 @@ public class LinkeInApp {
 				System.out.println("Same user.");
 			}
 			else {
-				// entered username has an account or not.
+				// entered user name has an account or not.
 				for(User u: users) {
 					if(u.getUserName().equals(username)) {
 						// user has account
 						user.addConnection(u);
-						return;
+						
 					}
 				}
 				System.out.println("User Not Found!");
@@ -161,9 +164,13 @@ public class LinkeInApp {
 		case 5: // view connections
 			user.viewConnection();
 			break;
+		case 6: //logout
+			user = null;
+			System.out.println("Logged Out!");
+			return;
 		default:
 			System.out.println("Invalid Choice!");
-		}
-	}
-
-}
+		} // switch ends here
+	} // while loop end
+	} // function end
+} // class end
