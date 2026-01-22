@@ -7,6 +7,7 @@ public class Array2D_demo {
 		Scanner sc = new Scanner(System.in);
 		// declare 2D array -> Initialize it -> display
 		int [][]arr = new int[3][3];
+		int d[] = new int[3];
 		
 		// initialize
 		for(int r = 0 ; r < 3 ; r++) {
@@ -17,8 +18,8 @@ public class Array2D_demo {
 		
 		
 		// display
-		for(int r = 0 ; r < 3 ; r++) { // rows
-			for(int c=0; c<3 ;c++) { // column
+		for(int c = 0 ; c < 3 ; c++) { // rows
+			for(int r=0; r<3 ;r++) { // column
 				System.out.print(" | "+ arr[r][c] + " | ");
 			}
 			System.out.println("");
