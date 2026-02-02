@@ -1,5 +1,6 @@
 package com.booking.app.service.serviceImp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,25 +47,41 @@ public class UserServiceImp implements UserService {
 
 	@Override
 	public UserDTO getUserById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return mapToDTO(userRepository.findById(id).get());
 	}
 
 	@Override
 	public List<UserDTO> getAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		// entities
+		List<User> users = userRepository.findAll();
+		//DTOs
+		List<UserDTO> userDtos = new ArrayList<>();
+		// Convert All Entities -> DTO's
+		for(User user : users) {
+			userDtos.add(mapToDTO(user));
+		}
+		
+		return userDtos;
 	}
 
 	@Override
 	public UserDTO updateUser(Integer id, UserDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
+		// Fetch whether the user is present or not in database.
+		User user = userRepository.findById(id).orElseThrow(
+				()-> new RuntimeException("User Not Found!"));
+		user.setUname(dto.getName());
+		user.setEmail(dto.getEmail());
+		user.setUcity(dto.getCity());
+		
+		return mapToDTO(userRepository.save(user));
 	}
 
 	@Override
 	public void deleteUser(Integer id) {
-		// TODO Auto-generated method stub
+		User user = userRepository.findById(id).orElseThrow(
+				()-> new RuntimeException("User Not Found!"));
+		
+		userRepository.delete(user);
 		
 	}
 
