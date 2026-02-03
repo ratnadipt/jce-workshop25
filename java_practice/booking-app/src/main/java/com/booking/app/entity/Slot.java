@@ -21,16 +21,16 @@ public class Slot {
 	@Column(name = "slot_id")
 	private Integer sid;
 	
-	@NotEmpty(message = "Slot Date should not Empty!")
-	@NotNull(message = "Slot Date can not be null!")
+	//@NotEmpty(message = "Slot Date should not Empty!")
+	//@NotNull(message = "Slot Date can not be null!")
 	private LocalDate slotDate;
 	
-	@NotEmpty(message = "Start time should not empty!")
-	@NotNull(message = "Start time can not be null!")
+	//@NotEmpty(message = "Start time should not empty!")
+	//@NotNull(message = "Start time can not be null!")
 	private LocalTime startTime;
 	
-	@NotEmpty(message = "End time should not empty!")
-	@NotNull(message = "End time can not be null!")
+	//@NotEmpty(message = "End time should not empty!")
+	//@NotNull(message = "End time can not be null!")
 	private LocalTime endTime;
 	
 	private boolean available = true;
